@@ -1,5 +1,6 @@
-aa
-Que haces git
-12313..
-
-..
+git status
+git add .
+git commit -m "comentario"
+git push origin master
+git pull origin master
+git clone https://github.com/gasticespedes/CursoIngresoJS.git
