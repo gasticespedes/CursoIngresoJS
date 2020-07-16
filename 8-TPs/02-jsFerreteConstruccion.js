@@ -6,13 +6,65 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
+    var ancho;
+    var largo;
+    var radio;
+    var rectanguloAlambre;
+    
+    ancho = txtIdAncho.value;
+    largo = txtIdLargo.value;
+    radio = txtIdRadio.value;
+
+    ancho = parseInt(ancho);
+    largo = parseInt(largo);
+    radio = parseInt(radio);
+    
+    rectanguloAlambre = ((ancho * 2) + (largo *2))* 3;
+    
+    alert("Se debe comprar " + rectanguloAlambre + " de alambre");
+
 
 }
 function Circulo () 
-{
-	
+{   
+    var ancho;
+    var largo;
+    var radio;
+    var perimetroAlambre;
+    
+    ancho = txtIdAncho.value;
+    largo = txtIdLargo.value;
+    radio = txtIdRadio.value;
+    
+    ancho = parseInt(ancho);
+    largo = parseInt(largo);
+    radio = parseFloat(radio);
+
+    perimetroAlambre = 2 * Math.PI * radio ;
+    perimetroAlambre = Math.ceil(perimetroAlambre)*3 ;
+     // perimetro
+    alert("Se debe comprar "+ perimetroAlambre + " de alambre");
+        
+    // CONSOLE.LOG : ejecuta en consola , toFixed(DECIMALES) = es para poner decimales, parseInt = lo deja en el numero mas bajo ej 3 en pi
+    // math.floor redondea para abajo, math.ceil redondea para arriba
 }
 function Materiales () 
 {
-	
+    var largo;
+    var ancho;
+    var bolsaCemento;
+    var bolsaCal;
+    var area;
+
+
+    ancho = txtIdAncho.value;
+    largo = txtIdLargo.value;
+    
+    ancho = parseInt(ancho);
+    largo = parseInt(largo);
+
+    area = ancho * largo;
+    bolsaCemento = area * 2; // es regla de 3 simple 
+    bolsaCal = area * 3;
+    alert("se necesitan " + bolsaCemento + " de cemento " + " y " + bolsaCal + " de cal");
 }
