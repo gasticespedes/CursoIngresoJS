@@ -11,7 +11,7 @@ function FahrenheitCentigrados ()
     temperatura = parseFloat(temperatura);
     
     centigrados = (temperatura - 32) * 5 / 9;
-    alert(temperatura + "Grados fahrenheit equivalen a " + centigrados + " grados centigrados");
+    alert(temperatura + " Grados fahrenheit equivalen a " + centigrados + " grados centigrados");
 }
 
 function CentigradosFahrenheit () 
