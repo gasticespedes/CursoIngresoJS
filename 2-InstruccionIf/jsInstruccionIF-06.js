@@ -11,7 +11,8 @@ function mostrar()
 
 	}
 	else {
-		if (edad <= 12 ){
+		if (edad <= 12 )
+		{
 			alert (" es menor de edad ");
 
 		}
