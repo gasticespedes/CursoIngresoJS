@@ -10,39 +10,61 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 
 function CalcularPrecio () 
+
 {
-     var cantidadLamparas;
-     var marcaDeLamparas;
-     var precioDescuento;
+	var precioLampara;
+	precioLampara = 35;
+	var cantidadDeLamparasCompradas;
+	cantidadDeLamparasCompradas = parseInt(txtIdCantidad.value);
+	var marcaLampara;
+	marcaLampara = Marca.value;
+	var subTotal;
+	subTotal = cantidadDeLamparasCompradas * precioLampara;
+	var precioConDescuento;
+	precioConDescuento = subTotal;
+	txtIdPrecioDescuento.value = precioConDescuento;
+	var iibb;
+	var precioTotal;
 
-     cantidadLamparas = txtIdCantidad.value;
-     marcaDeLamparas = Marca.value;
-     precioDescuento = txtIdprecioDescuento.value;
 
-     cantidadLamparas = cantidadLamparas* 35;
-     
-     parseInt(cantidadLamparas);
-     parseInt(precioDescuento);
-
-     if (cantidadLamparas >=6  ) {
-         cantidadLamparas = cantidadLamparas / 2;
-        precioDescuento = cantidadLamparas;
-        
-    }
-    else if (cantidadLamparas == 5 && Marca == "ArgentinaLuz"){ 
-            precioDescuento = cantidadLamparas* 0.40;
-            
-        }
-        else { (cantidadLamparas == 5 ) 
-        precioDescuento = cantidadLamparas * 0.30 
-            if (cantidadLamparas == 4 && Marca =="ArgentinaLuz" || "FelipeLamparas"){
-                precioDescuento = cantidadLamparas * 0.25
-                        }
-            else { 
-                precioDescuento = cantidadLamparas * 0.20
-            }}
-                if (cantidadLamparas ==3 && Marca == "ArgentinaLuz"){
-                precioDescuento = cantidadLamparas * 0.15 
+	if (cantidadDeLamparasCompradas>=6) {
+		precioConDescuento = subTotal * 0.50;
+	} else {
+		if (cantidadDeLamparasCompradas===5) {
+			switch(marcaLampara) {
+				case "ArgentinaLuz":
+					precioConDescuento = subTotal * 0.60;
+					break;
+				default:
+					precioConDescuento = subTotal * 0.70;
+					break;
+			}
+		} else {
+			if (cantidadDeLamparasCompradas===4) {
+				switch (marcaLampara) {
+					case "ArgentinaLuz":
+					case "FelipeLamparas":
+						precioConDescuento = subTotal * 0.75;
+						break;
+					default:
+					 	precioConDescuento = subTotal * 0.80;
+					 	break;
+				}
+			} else {
+				if (cantidadDeLamparasCompradas===3) {
+					switch (marcaLampara) {
+						case "ArgentinaLuz":
+							precioConDescuento = subTotal * 0.85;
+							break;
+						case "FelipeLamparas":
+							precioConDescuento = subTotal * 0.90;
+							break;
+						default:
+							precioConDescuento = subTotal * 0.95;
+							break;
+					}
+                }
             }
-        }      
-    }         
+        }
+    }
+}
