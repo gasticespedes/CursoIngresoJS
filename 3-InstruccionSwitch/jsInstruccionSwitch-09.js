@@ -9,8 +9,11 @@ function mostrar()
 	switch (estacionIngresada) {
 		case "Invierno":
 			switch (destino) {
-				case "Bariloche":
-					alert ( " El precio es " + precioEstandar * 1.20);
+					case "Bariloche":
+						descuento = precioEstandar * 0.20;
+						precioFinal = precioEstandar + descuento;
+					alert ( " El precio es " + precioFinal);
+
 					break;
 
 					case "Mar del plata":
@@ -27,6 +30,7 @@ function mostrar()
 					alert(" El precio es " + precioFinal);
 					break;
 			}
+			break;
 			
 		case "Verano":
 			switch (destino) {
