@@ -25,7 +25,7 @@ function mostrar()
 		}
 
 		respuesta = prompt(" Desea añadir otro numero ? Si/No")
-	}while(respuesta == "Si")
+	}while(respuesta == "Si");
 
 
 	txtIdSuma.value=sumaPositivos;
