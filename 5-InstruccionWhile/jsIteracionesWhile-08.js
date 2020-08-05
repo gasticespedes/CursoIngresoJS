@@ -10,7 +10,22 @@ function mostrar()
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
-	respuesta='si';
+	do{
+
+		numero = prompt(" Ingrese un numero");
+		numero = parseInt(numero);
+
+		if(numero >= 0 ){
+
+			sumaPositivos = sumaPositivos + numero;
+		}
+		 else { 
+
+			multiplicacionNegativos = multiplicacionNegativos * numero;
+		}
+
+		respuesta = prompt(" Desea añadir otro numero ? Si/No")
+	}while(respuesta == "Si")
 
 
 	txtIdSuma.value=sumaPositivos;
