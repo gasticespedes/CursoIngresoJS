@@ -46,15 +46,22 @@ function mostrar()
 
 	}while(temperaturaCorporal < 0 && isNaN(temperaturaCorporal));
 	
-	respuesta = confirm("Ingresar siguiente pasajero?")
-}while(respuesta == true)
+	
+
 
 
 	if (temperaturaCorporal > temperaturaMaxima){
 		
 		temperaturaMaxima = temperaturaCorporal;
+		//maximaTemperatura = nacionalidad
 	}
+
+	if (edad > 17 && estadoCivil == "Soltero"){
+		CantidadSolteros++;}
 	
+		respuesta = confirm("Ingresar siguiente pasajero?");
+		
+}while(respuesta == "Si");
 
 
 
